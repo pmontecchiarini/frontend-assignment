@@ -4,20 +4,82 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
   color: #002240;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+h1 {
+  margin: 0px;
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 2em;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 p {
   color: #537089;
-  font-size: 1em;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  word-break: keep-all;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*-------Header---------*/
+header {
+  margin: 10px 0px;
+}
+
+header #login,
+header nav {
+  display: none;
+}
+
+/*-------ABOVE THE FOLD---------*/
+#above_the_fold p {
+  color: #002240;
+}
+
+#main-image {
+  min-height: 296px;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+#main-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/*-------LOGO---------*/
+#top-logo a {
+  text-decoration: none;
+}
+
+#top-logo a img {
+  width: 50%;
+}
+
+#top-logo span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /*---- Buttons-------- */

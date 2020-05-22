@@ -1,0 +1,25 @@
+/*-------Header---------*/
+header{
+        margin:10px 0px;
+    #login,
+    nav {
+        display: none;
+    }
+}
+
+/*-------ABOVE THE FOLD---------*/
+
+#above_the_fold{
+        p{
+            color: $color-primary;
+        }
+}
+#main-image {
+    min-height: 296px;
+    overflow: hidden;
+    border: 1px solid red;
+    img{
+        object-fit: cover;
+        object-position: center;
+    }
+}

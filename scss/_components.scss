@@ -1,4 +1,41 @@
-button{
+/*-------LOGO---------*/
+#top-logo {
+    a {
+        text-decoration: none;
+        img {
+            width: 50%;
+        }
+    }
+
+    span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+
+}
+
+
+
+/*---- Buttons-------- */
+%button-wide {
+    font-family: $font-primary;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.125em;
+    font-weight: 600;
+    width: 100%;
+    border: 1px solid;
+}
+
+
+button {
     @extend %button-wide;
     color: blueviolet;
 }

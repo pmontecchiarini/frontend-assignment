@@ -13,29 +13,32 @@ $color_terciary: #0688FA;
 body{
     font-family: $font-primary;
     color: $color_primary;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+h1{ 
+    margin: 0px;
 }
 
 h2{
-    font-size: 1.75em;
+    font-size: 2em;
 }
 
 h3{
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: 600;
 }
 
 p{
     color: $color_secondary;
-    font-size: 1em;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    word-break: keep-all;
 }
 
-/*---- Buttons-------- */
-%button-wide {
-    font-family: $font-primary;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-size: 1.125em;
-    font-weight: 600;
-    width: 100%;
-    border:1px solid;
+img {
+  width: 100%;
+  height: auto;
 }
+
