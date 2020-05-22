@@ -1,0 +1,37 @@
+/*----Base and site-wide styling ------------ */
+/*---- Variables-------- */
+/*---- Base styling-------- */
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #002240;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+p {
+  color: #537089;
+  font-size: 1em;
+}
+
+/*---- Buttons-------- */
+button {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.125em;
+  font-weight: 600;
+  width: 100%;
+  border: 1px solid;
+}
+
+button {
+  color: blueviolet;
+}
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,41 @@
+/*---- Variables-------- */
+$font-primary: 'Source Sans Pro', sans-serif;
+$color-primary:  #002240;
+$color_secondary:  #537089;
+$color_terciary: #0688FA;
+
+
+
+
+
+/*---- Base styling-------- */
+
+body{
+    font-family: $font-primary;
+    color: $color_primary;
+}
+
+h2{
+    font-size: 1.75em;
+}
+
+h3{
+    font-size: 1em;
+    font-weight: 600;
+}
+
+p{
+    color: $color_secondary;
+    font-size: 1em;
+}
+
+/*---- Buttons-------- */
+%button-wide {
+    font-family: $font-primary;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.125em;
+    font-weight: 600;
+    width: 100%;
+    border:1px solid;
+}
