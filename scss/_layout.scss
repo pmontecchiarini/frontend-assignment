@@ -90,6 +90,7 @@ header {
 
 #investors {
     background: url(../img/bg-offices-mobile.svg) no-repeat;
+    background-size: contain;
     margin: 0 auto 2.5rem auto;
     padding-top: 3rem;
 
@@ -170,6 +171,7 @@ footer{
    
     padding: 2rem 0 4rem 0;
     background: #F4F4F4 url(../img/bg-footer-mobile.svg) no-repeat;
+    background-size: contain;
     background-position-y: bottom ;
 
     img{
