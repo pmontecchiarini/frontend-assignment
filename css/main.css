@@ -155,7 +155,6 @@ header nav {
   color: #002240;
 }
 
-/*-------TIMELINE---------*/
 /*-------OFFICES---------*/
 .cards {
   margin: 1.5rem auto;
@@ -305,5 +304,85 @@ footer #footer_bottom p {
   font-size: 1.2em;
   text-align: center;
   margin: 1rem 0;
+}
+
+/*--------Timeline Style-------- */
+/*-------TIMELINE---------*/
+.timeline {
+  background-color: #EFF8FF;
+  padding: 0 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.timeline-item ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  top: 0;
+}
+
+.timeline-item ul::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  border: 2px solid #0688FA;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+
+.timeline-item ul li {
+  margin: 20px 60px 60px;
+  position: relative;
+  padding: 0;
+  color: #fff #002240;
+  line-height: 20px;
+  width: 80%;
+  font-weight: 600;
+}
+
+.timeline-item ul li span {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 1rem;
+  left: -30px;
+}
+
+.timeline-item .info:first-letter {
+  text-transform: capitalize;
+  line-height: 1.7;
+}
+
+.timeline-item .time span {
+  position: absolute;
+  left: -80px;
+  font-weight: bold;
+  font-size: 1em;
+  color: #0688FA;
+}
+
+.timeline-item .time span:first-child {
+  top: 0px;
+}
+
+.timeline-item .time span:last-child {
+  top: 10%;
+}
+
+.timeline-item ul:last-of-type .arrow {
+  position: absolute;
+  top: 105%;
+  left: 22%;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
