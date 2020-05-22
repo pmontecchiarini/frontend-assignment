@@ -21,13 +21,11 @@ header {
 }
 
 #main-image {
-    min-height: 296px;
-    overflow: hidden;
-    border: 1px solid red;
+    height: 296px;
 
     img {
         object-fit: cover;
-        object-position: center;
+        height: 100%;
     }
 }
 

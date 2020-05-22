@@ -118,16 +118,13 @@ header nav {
 }
 
 #main-image {
-  min-height: 296px;
-  overflow: hidden;
-  border: 1px solid red;
+  height: 296px;
 }
 
 #main-image img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  height: 100%;
 }
 
 /*-------MISSION---------*/
