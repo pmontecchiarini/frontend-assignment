@@ -10,11 +10,10 @@ $color_terciary: #0688FA;
 
 /*---- Base styling-------- */
 
+
 body{
     font-family: $font-primary;
     color: $color_primary;
-    box-sizing: border-box;
-    padding: 5px 10px;
 }
 
 h1{ 
@@ -41,4 +40,18 @@ img {
   width: 100%;
   height: auto;
 }
+
+
+/*---- Buttons placeholder-------- */
+%button-wide {
+    font-family: $font-primary;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.125em;
+    font-weight: 600;
+    width: 100%;
+    border: 1px solid;
+    cursor: pointer;
+}
+
 

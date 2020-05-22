@@ -1,5 +1,6 @@
+
 /*-------LOGO---------*/
-#top-logo {
+h1 {
     a {
         text-decoration: none;
         img {
@@ -21,17 +22,43 @@
 
 }
 
-
-
 /*---- Buttons-------- */
-%button-wide {
-    font-family: $font-primary;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-size: 1.125em;
-    font-weight: 600;
-    width: 100%;
-    border: 1px solid;
-    cursor: pointer;
+
+.btn_white{
+    @extend %button-wide;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    color: $color-primary;
+    border-color: #fff;
+
 }
+
+.btn_blue{
+    @extend %button-wide;
+    background-color: $color-terciary;
+    color: #fff;
+
+}
+
+.btn_blue_white_border{
+    @extend %button-wide;
+    background-color: $color-terciary;
+    color: #fff;
+    border-color: #fff;
+
+}
+
+
+/*---- Cards-------- */
+
+.cards{
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+/*---- Navigation-------- */
 

@@ -1,12 +1,9 @@
-/*----Base and site-wide styling ------------ */
+/*--------Basic styling applyed wide-site (variables, placeholders, mixins)-------- */
 /*---- Variables-------- */
 /*---- Base styling-------- */
 body {
   font-family: "Source Sans Pro", sans-serif;
   color: #002240;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 5px 10px;
 }
 
 h1 {
@@ -34,6 +31,72 @@ img {
   height: auto;
 }
 
+/*---- Buttons placeholder-------- */
+.btn_white, .btn_blue, .btn_blue_white_border {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.125em;
+  font-weight: 600;
+  width: 100%;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+/*--------Reusable components (navs, cards, buttons)-------- */
+/*-------LOGO---------*/
+h1 a {
+  text-decoration: none;
+}
+
+h1 a img {
+  width: 50%;
+}
+
+h1 span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*---- Buttons-------- */
+.btn_white {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #002240;
+  border-color: #fff;
+}
+
+.btn_blue {
+  background-color: #0688FA;
+  color: #fff;
+}
+
+.btn_blue_white_border {
+  background-color: #0688FA;
+  color: #fff;
+  border-color: #fff;
+}
+
+/*---- Cards-------- */
+.cards {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  -webkit-box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*---- Navigation-------- */
+/*--------Page Layout (containter, flex)-------- */
 /*-------Header---------*/
 header {
   margin: 10px 0px;
@@ -71,15 +134,15 @@ header nav {
   margin: 5rem 0;
 }
 
-.mission_statements_item {
+.mission_item {
   margin: 30px 0;
 }
 
-.mission_statements_item h3 {
+.mission_item h3 {
   font-size: 1.25em;
 }
 
-.mission_statements_item img {
+.mission_item img {
   width: 25%;
 }
 
@@ -87,40 +150,97 @@ header nav {
   color: #002240;
 }
 
-#join-the-team button {
-  background-color: #0688FA;
-  color: #fff;
+/*-------TIMELINE---------*/
+/*-------OFFICES---------*/
+.cards {
+  margin: 1.5rem auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2rem 1rem;
 }
 
-/*-------LOGO---------*/
-#top-logo a {
-  text-decoration: none;
+.cards h3 {
+  margin: 1rem auto;
 }
 
-#top-logo a img {
+.cards .avatar {
+  margin: 1rem auto;
+  width: 25%;
+}
+
+/*-------INVESTORS---------*/
+#investors {
+  margin: 2.5rem auto;
+}
+
+#investors #investors_list .cards {
+  height: 145px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: 0;
+}
+
+#investors #investors_list .cards img {
+  height: 100%;
+  width: 100%;
+}
+
+/*-------FUTURE---------*/
+#future {
+  color: #FFF;
+  text-align: center;
+  padding-top: 2rem;
+  margin: 2rem auto;
+}
+
+#future h2 {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+#future button {
+  margin: 1rem auto;
+}
+
+/*-------FOOTER---------*/
+/*---- Bottom Navigation-------- */
+#footer_navigation {
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+#footer_navigation nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+#footer_navigation .bottom_nav {
   width: 50%;
 }
 
-#top-logo span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+#footer_navigation .bottom_nav ul {
+  margin: 1rem 0;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
-/*---- Buttons-------- */
-#join-the-team button {
-  font-family: "Source Sans Pro", sans-serif;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  font-size: 1.125em;
-  font-weight: 600;
-  width: 100%;
-  border: 1px solid;
+#footer_navigation .bottom_nav ul li {
+  list-style-type: none;
   cursor: pointer;
+  margin: 1rem 0;
+}
+
+footer {
+  background-color: #F4F4F4;
 }
 /*# sourceMappingURL=main.css.map */

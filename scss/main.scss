@@ -1,7 +1,12 @@
-/*----Base and site-wide styling ------------ */
-
+/*--------Basic styling applyed wide-site (variables, placeholders, mixins)-------- */
 @import '_base.scss';
-@import '_layout.scss';
+
+/*--------Reusable components (navs, cards, buttons)-------- */
 @import '_components.scss';
+
+/*--------Page Layout (containter, flex)-------- */
+@import '_layout.scss';
+
+
 
 
