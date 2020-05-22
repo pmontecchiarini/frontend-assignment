@@ -1,9 +1,7 @@
 /*----Base and site-wide styling ------------ */
 
 @import '_base.scss';
+@import '_layout.scss';
+@import '_components.scss';
 
 
-button{
-    @extend %button-wide;
-    color: blueviolet;
-}
