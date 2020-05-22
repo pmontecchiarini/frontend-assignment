@@ -156,5 +156,58 @@ nav{
 }
 
 footer{
-  background-color: #F4F4F4;
+    background-color: #F4F4F4;
+    padding: 2rem 0;
+
+    #footer_bottom{
+        text-align: justify;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    
+        p{
+            color: $color-primary;
+            font-size: 1em;
+            text-align: center;
+            margin: 3rem 0;
+           
+        }
+
+    }
+
+  }
+
+
+  /*---- Social Media Menu-------- */
+
+  #social_media{
+          display: flex;
+          justify-content: space-between;
+          margin: 1rem auto;
+          width: 50%;
+          padding: 0;
+          
+          li{
+              list-style-type: none;
+              a{
+                  text-decoration: none;
+              }
+          }
+    
+  }
+
+    /*---- Social Media Menu-------- */
+
+#terms_conditions_menu{
+    margin: 1rem 0;
+    padding: 0;
+        li{
+            list-style-type: none;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 1.2em;
+            text-align: center;
+            margin: 1rem 0;
+        }
+    
 }
