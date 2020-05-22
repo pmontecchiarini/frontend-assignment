@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 600;
 }
 
@@ -62,6 +62,36 @@ header nav {
      object-position: center;
 }
 
+/*-------MISSION---------*/
+#mission {
+  margin-top: 2.5rem;
+}
+
+#mission_statments {
+  margin: 5rem 0;
+}
+
+.mission_statements_item {
+  margin: 30px 0;
+}
+
+.mission_statements_item h3 {
+  font-size: 1.25em;
+}
+
+.mission_statements_item img {
+  width: 25%;
+}
+
+#join-the-team p {
+  color: #002240;
+}
+
+#join-the-team button {
+  background-color: #0688FA;
+  color: #fff;
+}
+
 /*-------LOGO---------*/
 #top-logo a {
   text-decoration: none;
@@ -83,7 +113,7 @@ header nav {
 }
 
 /*---- Buttons-------- */
-button {
+#join-the-team button {
   font-family: "Source Sans Pro", sans-serif;
   padding: 1rem 2rem;
   border-radius: 5px;
@@ -91,9 +121,6 @@ button {
   font-weight: 600;
   width: 100%;
   border: 1px solid;
-}
-
-button {
-  color: blueviolet;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

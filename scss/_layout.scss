@@ -23,3 +23,35 @@ header{
         object-position: center;
     }
 }
+
+/*-------MISSION---------*/
+
+#mission{
+    margin-top: 2.5rem;
+}
+
+#mission_statments{
+    margin: 5rem 0;
+}
+
+.mission_statements_item{
+    margin: 30px 0;
+    h3{
+        font-size: 1.25em;
+    }
+    img{
+        width: 25%;
+    }
+
+}
+
+#join-the-team{
+    p{
+        color: $color-primary;
+    }
+    button{
+        @extend %button-wide;
+        background-color: $color-terciary;
+        color: #fff;
+    }
+}
