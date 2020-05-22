@@ -153,6 +153,15 @@ header nav {
 }
 
 /*-------OFFICES---------*/
+#offices {
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(80deg, #FFF5F5 80%, #FFF 20%);
+}
+
+#offices .wrapper {
+  margin-bottom: 0px;
+}
+
 .cards {
   margin: 1.5rem auto;
   text-align: center;
@@ -166,13 +175,15 @@ header nav {
 }
 
 .cards .avatar {
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
   width: 25%;
 }
 
 /*-------INVESTORS---------*/
 #investors {
-  margin: 2.5rem auto;
+  background: url(../img/bg-offices-mobile.svg) no-repeat;
+  margin: 0 auto 2.5rem auto;
+  padding-top: 3rem;
 }
 
 #investors #investors_list .cards {
@@ -191,8 +202,12 @@ header nav {
 #future {
   color: #FFF;
   text-align: center;
-  padding-top: 2rem;
+  padding: 4rem 2rem 2rem 2rem;
   margin: 2rem auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(80deg, #0688FA 80%, #FFF 20%);
 }
 
 #future h2 {
@@ -207,8 +222,8 @@ header nav {
 /*-------FOOTER---------*/
 /*---- Bottom Navigation-------- */
 #footer_navigation {
-  padding: 2rem 0;
-  margin: 2rem 0;
+  padding: 1rem;
+  margin: 0;
 }
 
 #footer_navigation nav {
@@ -242,8 +257,14 @@ header nav {
 }
 
 footer {
-  background-color: #F4F4F4;
-  padding: 2rem 0;
+  padding: 2rem 0 4rem 0;
+  background: #F4F4F4 url(../img/bg-footer-mobile.svg) no-repeat;
+  background-position-y: bottom;
+}
+
+footer img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer #footer_bottom {
