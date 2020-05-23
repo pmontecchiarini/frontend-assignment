@@ -153,12 +153,6 @@ h1 span {
   }
 }
 
-@media (min-width: 1440px) {
-  header .wrapper {
-    margin-bottom: 2rem;
-  }
-}
-
 header #login,
 header #top_menu {
   display: none;
@@ -593,11 +587,19 @@ footer #footer_bottom {
 
 @media (min-width: 768px) {
   footer #footer_bottom {
-    margin-bottom: 4rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 4rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 1rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -615,6 +617,16 @@ footer #footer_bottom p {
   }
 }
 
+@media (min-width: 768px) {
+  footer .copyright {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
 /*---- Social Media Menu-------- */
 #social_media {
   display: -webkit-box;
@@ -628,15 +640,32 @@ footer #footer_bottom p {
   padding: 0;
 }
 
+@media (min-width: 768px) {
+  #social_media {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -ms-flex-line-pack: right;
+        align-content: right;
+    width: 50%;
+  }
+}
+
 #social_media li {
   list-style-type: none;
+}
+
+@media (min-width: 768px) {
+  #social_media li {
+    padding-left: 2rem;
+  }
 }
 
 #social_media li a {
   text-decoration: none;
 }
 
-/*---- Social Media Menu-------- */
+/*---- Terms & Conditions Menu-------- */
 #terms_conditions_menu {
   margin: 1rem 0;
   padding: 0;
@@ -655,6 +684,12 @@ footer #footer_bottom p {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  #terms_conditions_menu li {
+    padding-right: 2rem;
   }
 }
 
