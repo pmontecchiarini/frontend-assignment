@@ -1,10 +1,14 @@
 /*-------TIMELINE---------*/
 
-.timeline{
+.progress_timeline{
     background-color: #EFF8FF;
     padding:0 2rem;
     margin: 2rem 0;
     position: relative;
+    @include tablet {
+        width: 75%;
+        margin: 0px auto;
+      }
 }
 
 .timeline-item ul{

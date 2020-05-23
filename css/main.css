@@ -8,11 +8,7 @@ body {
 
 .wrapper {
   padding: 1rem;
-  margin: 10px auto;
-}
-
-h1 {
-  margin: 2rem 0px;
+  margin: 1rem auto;
 }
 
 h2 {
@@ -110,13 +106,13 @@ h1 span {
 /*---- Navigation-------- */
 /*--------Page Layout (containter, flex)-------- */
 /*-------Header---------*/
-header {
-  margin: 10px 0px;
-}
-
 header #login,
 header nav {
   display: none;
+}
+
+header h1 {
+  margin: 0px;
 }
 
 /*-------ABOVE THE FOLD---------*/
@@ -133,6 +129,12 @@ header nav {
 @media (min-width: 768px) and (max-width: 1439px) {
   #above_the_fold p {
     width: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .wrapper {
+    padding: 1rem 2rem;
   }
 }
 
@@ -159,10 +161,6 @@ header nav {
 }
 
 /*-------MISSION /CULTURE---------*/
-#mission {
-  margin-top: 2.5rem;
-}
-
 @media (min-width: 768px) and (max-width: 1439px) {
   #mission {
     text-align: center;
@@ -221,6 +219,14 @@ header nav {
 }
 
 /*-------OFFICES---------*/
+#timeline {
+  margin: 1rem auto;
+}
+
+#timeline h2 {
+  padding: 1rem 0.5rem;
+}
+
 @media (min-width: 768px) and (max-width: 1439px) {
   #timeline h2 {
     text-align: center;
@@ -245,7 +251,7 @@ header nav {
   }
 }
 
-#offices .wrapper {
+.wrapper {
   margin-bottom: 0px;
 }
 
@@ -283,10 +289,17 @@ header nav {
 
 /*-------INVESTORS---------*/
 #investors {
-  background: url(../img/bg-offices-mobile.svg) no-repeat;
+  background: url(../img/bg-investors-mobile.svg) no-repeat;
   background-size: contain;
   margin: 0 auto 2.5rem auto;
   padding-top: 3rem;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  #investors {
+    background: url(../img/bg-investors.svg) no-repeat;
+    background-size: 100%;
+  }
 }
 
 #investors h2 {
@@ -386,8 +399,33 @@ header nav {
 /*-------FOOTER---------*/
 /*---- Bottom Navigation-------- */
 #footer_navigation {
-  padding: 1rem;
-  margin: 0;
+  margin: 2rem auto;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  #footer_navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  #footer_navigation h1 {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  #footer_navigation h1 img {
+    width: 60%;
+  }
 }
 
 #footer_navigation nav {
@@ -403,6 +441,14 @@ header nav {
           justify-content: center;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  #footer_navigation nav {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
 }
 
 #footer_navigation .bottom_nav {
@@ -427,6 +473,14 @@ footer {
   background-position-y: bottom;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  footer {
+    background: #F4F4F4 url(../img/bg-footer.svg) no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+  }
+}
+
 footer img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -446,11 +500,28 @@ footer #footer_bottom {
           justify-content: center;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  footer #footer_bottom {
+    margin-bottom: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+  }
+}
+
 footer #footer_bottom p {
   color: #002240;
   font-size: 1em;
   text-align: center;
   margin: 3rem 0;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  footer #footer_bottom p {
+    text-align: left;
+    margin: 1rem 0;
+  }
 }
 
 /*---- Social Media Menu-------- */
@@ -480,6 +551,22 @@ footer #footer_bottom p {
   padding: 0;
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  #terms_conditions_menu {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
 #terms_conditions_menu li {
   list-style-type: none;
   cursor: pointer;
@@ -491,11 +578,18 @@ footer #footer_bottom p {
 
 /*--------Timeline Style-------- */
 /*-------TIMELINE---------*/
-.timeline {
+.progress_timeline {
   background-color: #EFF8FF;
   padding: 0 2rem;
   margin: 2rem 0;
   position: relative;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .progress_timeline {
+    width: 75%;
+    margin: 0px auto;
+  }
 }
 
 .timeline-item ul {

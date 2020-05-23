@@ -1,16 +1,16 @@
 /*-------Header---------*/
 header {
-    margin: 10px 0px;
-
+    
     #login,
     nav {
         display: none;
     }
 
+    h1{
+        margin: 0px;
+    }
+
 }
-
-
-
 
 /*-------ABOVE THE FOLD---------*/
 
@@ -28,6 +28,11 @@ header {
     }
 }
 
+.wrapper{
+    @include tablet {
+        padding: 1rem 2rem;
+      }
+}
 #main-image {
     height: 296px;
     margin-bottom: 2rem;
@@ -49,7 +54,7 @@ header {
 /*-------MISSION /CULTURE---------*/
 
 #mission {
-    margin-top: 2.5rem;
+  
     @include tablet {
         text-align: center;
       }
@@ -99,13 +104,15 @@ header {
 
 /*-------OFFICES---------*/
 #timeline{
+    margin: 1rem auto;
     h2{
+        padding: 1rem 0.5rem;
         @include tablet {
             text-align: center;
             
           }
     }
-    }
+}
     
 
 
@@ -125,9 +132,10 @@ header {
         background-image: -webkit-linear-gradient(80deg, #FFF5F5 60%, #FFF 40%);
         
       }
-    .wrapper{
-        margin-bottom:0px
-    }
+}
+
+.wrapper{
+    margin-bottom:0px
 }
 
 .flex-wrapper{
@@ -162,10 +170,15 @@ header {
 /*-------INVESTORS---------*/
 
 #investors {
-    background: url(../img/bg-offices-mobile.svg) no-repeat;
+    background: url(../img/bg-investors-mobile.svg) no-repeat;
     background-size: contain;
     margin: 0 auto 2.5rem auto;
     padding-top: 3rem;
+    @include tablet {
+        background: url(../img/bg-investors.svg) no-repeat;
+        background-size: 100%;
+     
+      } 
 
     h2{
         text-align: left;
@@ -251,8 +264,28 @@ header {
 
 /*---- Bottom Navigation-------- */
 #footer_navigation {
-    padding: 1rem;
-    margin: 0;
+    
+    margin: 2rem auto;
+    @include tablet {
+        display:flex;
+        width: 90%;
+       
+        justify-content: space-between;
+       
+      } 
+
+      h1{
+        @include tablet {
+            flex: 2;         
+          } 
+        img{
+            @include tablet {
+              
+                width: 60%;
+                
+              } 
+        }
+      }
     
 
 nav{
@@ -260,11 +293,15 @@ nav{
     flex-flow: row wrap;
     justify-content: center;
     align-content: space-between;
+    @include tablet {
+       flex:3
+      } 
     
     
 }
 .bottom_nav{
     width: 50%;
+    
     ul{
 
         margin: 1rem 0;
@@ -280,11 +317,15 @@ nav{
 }
 
 footer{
-   
     padding: 2rem 0 4rem 0;
     background: #F4F4F4 url(../img/bg-footer-mobile.svg) no-repeat;
     background-size: contain;
     background-position-y: bottom ;
+    @include tablet {
+        background: #F4F4F4 url(../img/bg-footer.svg) no-repeat;
+        background-size: contain;
+        background-position-y: bottom ;
+       } 
 
     img{
         object-fit: cover;
@@ -295,13 +336,23 @@ footer{
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
+        
+        @include tablet {
+            margin-bottom: 4rem;
+            display: flex;
+            padding: 1rem;
+            
+           }
             
         p{
             color: $color-primary;
             font-size: 1em;
             text-align: center;
             margin: 3rem 0;
-           
+            @include tablet {
+                text-align: left;
+                margin: 1rem 0;
+               }
         }
 
     }
@@ -320,6 +371,7 @@ footer{
           
           li{
               list-style-type: none;
+             
               a{
                   text-decoration: none;
               }
@@ -332,6 +384,12 @@ footer{
 #terms_conditions_menu{
     margin: 1rem 0;
     padding: 0;
+    @include tablet {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex:1;
+       }
         li{
             list-style-type: none;
             cursor: pointer;
