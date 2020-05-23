@@ -10,7 +10,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <!-- <script type="text/javascript" src="./js/timeline.js"></script> -->
+
     <title>Saleswhale</title>
 </head>
 
@@ -30,8 +30,8 @@
             </ul>
         </nav>
         <div id="login">
-            <button class="btn_white_blue_border">Log In</button>
-            <button class="btn_blue">Get a Demo</button>
+            <button class="btn_white_blue_border grow">Log In</button>
+            <button class="btn_blue grow">Get a Demo</button>
         </div>
 
     </header>
@@ -88,55 +88,41 @@
             <p>If you are excited by our vision of the future, and want to solve meaningful problems, talk to
                 us!
             </p>
-            <button class="btn_blue">Join the team</button>
+            <button class="btn_blue grow">Join the team</button>
         </div>
     </div>
-    <div id="timeline">
+    <section class="progress_timeline">
         <h2>Our Progress</h2>
-        <section class="progress_timeline">
-            <div class="container">
-
-                <div class="timeline-item">
-                    <ul id="first-list">
-                        <li>
-                            <span><img src="./img/timeline-icon.svg" alt="" /></span>
-                            <div class="info">Founded in Singapore by Gabriel Lim, Ethan Le, and Venus Wong.</div>
-                            <div class="time">
-                                <span>2015</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span></span>
-                            <div class="info">Accepted into Y Combinator (S16) and moved to San Francisco.</div>
-                            <div class="time">
-                                <span>2016</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span></span>
-                            <div class="info">Raised US$1.2M in seed funding and hired core engineers.</div>
-                            <div class="time">
-                                <span>2017</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span></span>
-                            <div class="info">Raised US$5.3M in Series A and expanded team size.</div>
-                            <div class="time">
-                                <span>2019</span>
-                            </div>
-                        </li>
-                        <li>
-                            <span></span>
-                            <div class="info">Opened US office in Washington, DC and hired US sales team.</div>
-                            <div class="time">
-                                <span>2020</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-        </section>
-    </div>
+        <div class="timeline">
+            <ul>
+                <li>
+                    <div class="info">Founded in Singapore by Gabriel Lim, Ethan Le, and Venus Wong.
+                        <time>2015</time>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">Accepted into Y Combinator (S16) and moved to San Francisco.
+                        <time>2016</time>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">Raised US$1.2M in seed funding and hired core engineers.
+                    <time>2017</time>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">Raised US$5.3M in Series A and expanded team size.
+                        <time>2019</time>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">Opened US office in Washington, DC and hired US sales team.
+                        <time>2020</time>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
     <div id="offices" class="wrapper">
         <h2>Our Offices</h2>
         <div class="flex-wrapper">
@@ -170,8 +156,8 @@
             <div class="two"></div>
             <h2>See the future</h2>
             <div class="flex-wrapper">
-                <button class="btn_white">Get a Demo</button>
-                <button class="btn_blue_white_border">Read use cases</button>
+                <button class="btn_white grow">Get a Demo</button>
+                <button class="btn_blue_white_border grow">Read use cases</button>
             </div>
         </div>
     </div>
@@ -253,7 +239,7 @@
             </div>
         </div>
     </footer>
-
+    <script type="text/javascript" src="./js/timeline.js"></script>
 </body>
 
 </html>

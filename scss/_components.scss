@@ -1,17 +1,18 @@
 /*-------LOGO---------*/
 h1 {
+    margin: 0px;
+    width: 50%;
+    line-height: 0em;
+     //Tablet
+     @include tablet {
+        width: 25%;
+    }
 
     a {
         text-decoration: none;
 
         img {
-            width: 50%;
-
-            //Tablet
-            @include tablet {
-                width: 25%;
-            }
-
+            width: 100%;
         }
     }
 
@@ -52,6 +53,10 @@ h1 {
     @extend %button-wide;
     background-color: $color-terciary;
     color: #fff;
+    
+    &:hover{
+        background-color: 0475d8;
+    }
 
 }
 

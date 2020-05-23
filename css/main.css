@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*--------Basic styling applyed wide-site (variables, placeholders, mixins)-------- */
 /*---- Variables-------- */
 /*---- Base styling-------- */
@@ -44,21 +45,37 @@ img {
   cursor: pointer;
 }
 
+.grow.btn_white, .grow.btn_white_blue_border, .grow.btn_blue, .grow.btn_blue_white_border {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.grow.btn_white:hover, .grow.btn_white_blue_border:hover, .grow.btn_blue:hover, .grow.btn_blue_white_border:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 /*---- Media queries Mixins-------- */
 /*--------Reusable components (navs, cards, buttons)-------- */
 /*-------LOGO---------*/
+h1 {
+  margin: 0px;
+  width: 50%;
+  line-height: 0em;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    width: 25%;
+  }
+}
+
 h1 a {
   text-decoration: none;
 }
 
 h1 a img {
-  width: 50%;
-}
-
-@media (min-width: 768px) {
-  h1 a img {
-    width: 25%;
-  }
+  width: 100%;
 }
 
 h1 span {
@@ -90,6 +107,10 @@ h1 span {
 .btn_blue {
   background-color: #0688FA;
   color: #fff;
+}
+
+.btn_blue:hover {
+  background-color: 0475d8;
 }
 
 .btn_blue_white_border {
@@ -174,16 +195,6 @@ header #top_menu ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header h1 {
-  margin: 0px;
-  width: 25%;
-  line-height: 0em;
-}
-
-header h1 img {
-  width: 100%;
 }
 
 header #login {
@@ -303,19 +314,14 @@ header #login button {
   }
 }
 
-/*-------OFFICES---------*/
-#timeline {
+/*-------PROGRESS/TIMELINE---------*/
+.progress_timeline {
   margin: 1rem auto;
 }
 
-#timeline h2 {
+.progress_timeline h2 {
   padding: 1rem 0.5rem;
-}
-
-@media (min-width: 768px) {
-  #timeline h2 {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 /*-------OFFICES---------*/
@@ -654,88 +660,98 @@ footer #footer_bottom p {
 
 /*--------Timeline Style-------- */
 /*-------TIMELINE---------*/
-.progress_timeline {
+.timeline {
   background-color: #EFF8FF;
-  padding: 0 2rem;
-  margin: 2rem 0;
-  position: relative;
 }
 
 @media (min-width: 768px) {
-  .progress_timeline {
-    width: 75%;
+  .timeline {
+    width: 80%;
     margin: 0px auto;
   }
 }
 
-.timeline-item ul {
+.timeline ul {
+  margin: 0px;
+  padding: 0 0 40px 0;
+}
+
+.timeline ul li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   position: relative;
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  top: 0;
+  width: 3px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  background: #0688FA;
+  right: 20%;
 }
 
-.timeline-item ul::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
-  border: 2px solid #0688FA;
+.timeline ul li::after {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 30px;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: inherit;
+  background: url(../img/timeline-icon.svg) no-repeat;
+  background-size: cover;
 }
 
-.timeline-item ul li {
-  margin: 20px 60px 60px;
+.timeline ul li div {
   position: relative;
-  padding: 0;
-  color: #fff #002240;
-  line-height: 20px;
-  width: 80%;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  margin-left: 2rem;
   font-weight: 600;
 }
 
-.timeline-item ul li span {
-  content: "";
-  display: block;
+.timeline ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
   width: 0;
-  height: 100%;
-  position: absolute;
-  top: 1rem;
-  left: -30px;
+  height: 0;
+  border-style: solid;
 }
 
-.timeline-item .info:first-letter {
-  text-transform: capitalize;
-  line-height: 1.7;
+.timeline ul li div::before {
+  left: -15px;
+  border: 0px;
 }
 
-.timeline-item .time span {
-  position: absolute;
-  left: -80px;
-  font-weight: bold;
-  font-size: 1em;
+time {
   color: #0688FA;
-}
-
-.timeline-item .time span:first-child {
-  top: 0px;
-}
-
-.timeline-item .time span:last-child {
-  top: 10%;
-}
-
-.timeline-item ul:last-of-type .arrow {
+  font-weight: bold;
   position: absolute;
-  top: 105%;
-  left: 22%;
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
-  cursor: pointer;
+  bottom: 25%;
+  left: -25%;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline ul li::after {
+  -webkit-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translate3d(-200px, 0, 0);
+          transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+  -webkit-transform: none;
+          transform: none;
+  visibility: visible;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
