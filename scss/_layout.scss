@@ -1,15 +1,67 @@
 /*-------Header---------*/
 header {
-    
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .wrapper {
+        @include desktop {
+            margin-bottom: 2rem;
+
+        }
+    }
+
     #login,
-    nav {
+    #top_menu {
         display: none;
+
+        @include desktop {
+            display: flex;
+            width: 30%;
+            margin: 0px;
+        }
     }
 
-    h1{
+    #top_menu ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0 0 0 1rem;
+        width: 100%;
+
+        li {
+            padding: 0px;
+            margin: 0px;
+            align-items: center
+        }
+    }
+
+    h1 {
         margin: 0px;
+
+        width: 25%;
+        line-height: 0em;
+
+        img {
+            width: 100%;
+        }
+
     }
 
+    #login {
+        justify-content: flex-end;
+
+        button {
+            display: inline-block;
+            width: auto;
+            text-align: center;
+            margin-left: 1rem;
+            padding: 0 2rem;
+        }
+    }
 }
 
 /*-------ABOVE THE FOLD---------*/
@@ -18,24 +70,28 @@ header {
     h2 {
         @include tablet {
             width: 45%;
-          }
+        }
     }
+
     p {
         color: $color-primary;
+
         @include tablet {
             width: 45%;
-          }
+        }
     }
 }
 
-.wrapper{
+.wrapper {
     @include tablet {
         padding: 1rem 2rem;
-      }
+    }
 }
+
 #main-image {
     height: 296px;
     margin-bottom: 2rem;
+
     img {
         object-fit: cover;
         height: 100%;
@@ -43,37 +99,40 @@ header {
 }
 
 .flex_wrapper {
+
     //Tablet only
-@include tablet {
-    display: flex;
-    justify-content: space-between;
-  }
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
 
 }
 
 /*-------MISSION /CULTURE---------*/
 
 #mission {
-  
+
     @include tablet {
         text-align: center;
-      }
+    }
 }
 
 #mission_statments {
     margin: 3rem 0;
+
     @include tablet {
         display: flex;
         justify-content: space-between;
         text-align: left;
-      }
+    }
 }
 
 .mission_item {
     margin: 30px 0;
+
     @include tablet {
         width: 30%;
-      }
+    }
 
     h3 {
         font-size: 1.25em;
@@ -89,61 +148,66 @@ header {
     @include tablet {
         width: 60%;
         margin: 0 auto;
-      }
+    }
+
     p {
         color: $color-primary;
     }
-    button{
+
+    button {
         @include tablet {
             width: 40%;
-            
-          }
+
+        }
     }
 
 }
 
 /*-------OFFICES---------*/
-#timeline{
+#timeline {
     margin: 1rem auto;
-    h2{
+
+    h2 {
         padding: 1rem 0.5rem;
+
         @include tablet {
             text-align: center;
-            
-          }
+
+        }
     }
 }
-    
+
 
 
 /*-------OFFICES---------*/
 
-#offices{
-    h2{
+#offices {
+    h2 {
         @include tablet {
             text-align: center;
-            
-          }
+
+        }
     }
-    
+
     background-color: #FFF;
     background-image: -webkit-linear-gradient(80deg, #FFF5F5 80%, #FFF 20%);
+
     @include tablet {
         background-image: -webkit-linear-gradient(80deg, #FFF5F5 60%, #FFF 40%);
-        
-      }
+
+    }
 }
 
-.wrapper{
-    margin-bottom:0px
+.wrapper {
+    margin-bottom: 0px
 }
 
-.flex-wrapper{
+.flex-wrapper {
     @include tablet {
-        display:flex;
-        
-      }
-    
+        display: flex;
+
+    }
+
 }
 
 .cards {
@@ -151,13 +215,14 @@ header {
     text-align: center;
     box-sizing: border-box;
     padding: 2rem 1rem;
+
     @include tablet {
         padding: 1.5rem 2.5rem;
         width: 40%;
-        
-      }
 
-    h3{
+    }
+
+    h3 {
         margin: 1rem auto;
     }
 
@@ -174,40 +239,43 @@ header {
     background-size: contain;
     margin: 0 auto 2.5rem auto;
     padding-top: 3rem;
+
     @include tablet {
         background: url(../img/bg-investors.svg) no-repeat;
         background-size: 100%;
-     
-      } 
 
-    h2{
+    }
+
+    h2 {
         text-align: left;
+
         @include tablet {
             text-align: center;
-            
-          } 
+
+        }
     }
 
     #investors_list {
         @include tablet {
-            display:flex;
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-          }
+        }
 
 
         .cards {
-           
+
             height: 145px;
             margin: 2rem auto;
             padding: 2rem;
             background-color: red($color: #000000);
+
             @include tablet {
                 width: 40%;
                 height: 230px;
-              } 
-            
-            img{
+            }
+
+            img {
                 height: 100%;
                 width: 100%;
             }
@@ -217,7 +285,7 @@ header {
 
 /*-------FUTURE---------*/
 
-#future{
+#future {
     color: #FFF;
     text-align: center;
     padding: 4rem 2rem 2rem 2rem;
@@ -233,170 +301,171 @@ header {
         background-image: none;
         padding: 1rem;
         margin: 10px 1rem;
-      } 
+    }
 
-    h2{
+    h2 {
         font-weight: 600;
         font-size: 2em;
     }
 
-    .flex-wrapper{
+    .flex-wrapper {
         @include tablet {
             display: flex;
             align-content: space-between;
             width: 60%;
             justify-content: center;
             margin: 0px auto;
-          } 
+        }
     }
 
-   button{
-       margin: 1rem auto;
-       @include tablet {
-        width: 40%;
-      } 
+    button {
+        margin: 1rem auto;
+
+        @include tablet {
+            width: 40%;
+        }
+    }
 }
-   }
 
 
-  
+
 /*-------FOOTER---------*/
 
 /*---- Bottom Navigation-------- */
 #footer_navigation {
-    
+
     margin: 2rem auto;
+
     @include tablet {
-        display:flex;
+        display: flex;
         width: 90%;
-       
+
         justify-content: space-between;
-       
-      } 
 
-      h1{
-        @include tablet {
-            flex: 2;         
-          } 
-        img{
-            @include tablet {
-              
-                width: 60%;
-                
-              } 
-        }
-      }
-    
-
-nav{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: space-between;
-    @include tablet {
-       flex:3
-      } 
-    
-    
-}
-.bottom_nav{
-    width: 50%;
-    
-    ul{
-
-        margin: 1rem 0;
-        padding: 0;
-    li{
-        list-style-type: none;
-        cursor: pointer;
-        margin: 1rem 0;
     }
 
-}
-}
+    h1 {
+        @include tablet {
+            flex: 2;
+        }
+
+        img {
+            @include tablet {
+
+                width: 60%;
+
+            }
+        }
+    }
+
+
+    nav {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: space-between;
+
+        @include tablet {
+            flex: 3
+        }
+
+
+    }
+
+    .bottom_nav {
+        width: 50%;
+
+        ul {
+
+            margin: 1rem 0;
+            padding: 0;
+
+            li {
+                list-style-type: none;
+                cursor: pointer;
+                margin: 1rem 0;
+            }
+
+        }
+    }
 }
 
-footer{
+footer {
     padding: 2rem 0 4rem 0;
     background: #F4F4F4 url(../img/bg-footer-mobile.svg) no-repeat;
     background-size: contain;
-    background-position-y: bottom ;
+    background-position-y: bottom;
+
     @include tablet {
         background: #F4F4F4 url(../img/bg-footer.svg) no-repeat;
         background-size: contain;
-        background-position-y: bottom ;
-       } 
+        background-position-y: bottom;
+    }
 
-    img{
+    img {
         object-fit: cover;
     }
 
-    #footer_bottom{
+    #footer_bottom {
         text-align: justify;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
-        
+
         @include tablet {
             margin-bottom: 4rem;
             display: flex;
             padding: 1rem;
-            
-           }
-            
-        p{
+
+        }
+
+        p {
             color: $color-primary;
             font-size: 1em;
             text-align: center;
             margin: 3rem 0;
+
             @include tablet {
                 text-align: left;
                 margin: 1rem 0;
-               }
+            }
         }
 
     }
 
-  }
+}
 
 
-  /*---- Social Media Menu-------- */
+/*---- Social Media Menu-------- */
 
-  #social_media{
-          display: flex;
-          justify-content: space-between;
-          margin: 1rem auto;
-          width: 50%;
-          padding: 0;
-          
-          li{
-              list-style-type: none;
-             
-              a{
-                  text-decoration: none;
-              }
-          }
-    
-  }
+#social_media {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+    width: 50%;
+    padding: 0;
 
-    /*---- Social Media Menu-------- */
+    li {
+        list-style-type: none;
 
-#terms_conditions_menu{
+        a {
+            text-decoration: none;
+        }
+    }
+
+}
+
+/*---- Social Media Menu-------- */
+
+#terms_conditions_menu {
     margin: 1rem 0;
     padding: 0;
+
     @include tablet {
         width: 50%;
         display: flex;
         flex-direction: row;
-        flex:1;
-       }
-        li{
-            list-style-type: none;
-            cursor: pointer;
-            font-weight: 800;
-            font-size: 1.2em;
-            text-align: center;
-            margin: 1rem 0;
-        }
-    
+        flex: 1;
+    }
+
 }

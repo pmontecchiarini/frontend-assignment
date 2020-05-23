@@ -1,36 +1,37 @@
 /*---- Variables-------- */
-$font-primary: 'Source Sans Pro', sans-serif;
-$color-primary:  #002240;
-$color_secondary:  #537089;
+$font-primary: 'Source Sans Pro',
+sans-serif;
+$color-primary: #002240;
+$color_secondary: #537089;
 $color_terciary: #0688FA;
 
 /*---- Base styling-------- */
 
-body{
-    font-family: $font-primary;
-    color: $color_primary;
+body {
+  font-family: $font-primary;
+  color: $color_primary;
 }
 
-.wrapper{
-    padding:1rem;
-    margin: 1rem auto;
+.wrapper {
+  padding: 1rem;
+  margin: 1rem auto;
 }
 
-h2{
-    font-size: 2em;
+h2 {
+  font-size: 2em;
 
 }
 
-h3{
-    font-size: 1.75em;
-    font-weight: 600;
+h3 {
+  font-size: 1.75em;
+  font-weight: 600;
 }
 
-p{
-    color: $color_secondary;
-    font-size: 1.25em;
-    line-height: 1.5em;
-    word-break: keep-all;
+p {
+  color: $color_secondary;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  word-break: keep-all;
 }
 
 img {
@@ -41,14 +42,14 @@ img {
 
 /*---- Buttons placeholder-------- */
 %button-wide {
-    font-family: $font-primary;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-size: 1.125em;
-    font-weight: 600;
-    width: 100%;
-    border: 1px solid;
-    cursor: pointer;
+  font-family: $font-primary;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.125em;
+  font-weight: 600;
+  width: 100%;
+  border: 1px solid;
+  cursor: pointer;
 }
 
 /*---- Media queries Mixins-------- */
@@ -57,7 +58,7 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$tablet-width}) {
     @content;
   }
 }

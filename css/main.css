@@ -33,7 +33,7 @@ img {
 }
 
 /*---- Buttons placeholder-------- */
-.btn_white, .btn_blue, .btn_blue_white_border {
+.btn_white, .btn_white_blue_border, .btn_blue, .btn_blue_white_border {
   font-family: "Source Sans Pro", sans-serif;
   padding: 1rem 2rem;
   border-radius: 5px;
@@ -55,7 +55,7 @@ h1 a img {
   width: 50%;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   h1 a img {
     width: 25%;
   }
@@ -81,6 +81,12 @@ h1 span {
   border-color: #fff;
 }
 
+.btn_white_blue_border {
+  background: #FFFFFF;
+  color: #0688FA;
+  border-color: #0688FA;
+}
+
 .btn_blue {
   background-color: #0688FA;
   color: #fff;
@@ -104,19 +110,98 @@ h1 span {
 }
 
 /*---- Navigation-------- */
+.navigation-menu li {
+  list-style-type: none;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 1rem 0;
+}
+
 /*--------Page Layout (containter, flex)-------- */
 /*-------Header---------*/
+@media (min-width: 1440px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1440px) {
+  header .wrapper {
+    margin-bottom: 2rem;
+  }
+}
+
 header #login,
-header nav {
+header #top_menu {
   display: none;
+}
+
+@media (min-width: 1440px) {
+  header #login,
+  header #top_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    margin: 0px;
+  }
+}
+
+header #top_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0 0 0 1rem;
+  width: 100%;
+}
+
+header #top_menu ul li {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header h1 {
   margin: 0px;
+  width: 25%;
+  line-height: 0em;
+}
+
+header h1 img {
+  width: 100%;
+}
+
+header #login {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header #login button {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin-left: 1rem;
+  padding: 0 2rem;
 }
 
 /*-------ABOVE THE FOLD---------*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #above_the_fold h2 {
     width: 45%;
   }
@@ -126,13 +211,13 @@ header h1 {
   color: #002240;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #above_the_fold p {
     width: 45%;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .wrapper {
     padding: 1rem 2rem;
   }
@@ -149,7 +234,7 @@ header h1 {
   height: 100%;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .flex_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -161,7 +246,7 @@ header h1 {
 }
 
 /*-------MISSION /CULTURE---------*/
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #mission {
     text-align: center;
   }
@@ -171,7 +256,7 @@ header h1 {
   margin: 3rem 0;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #mission_statments {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -187,7 +272,7 @@ header h1 {
   margin: 30px 0;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .mission_item {
     width: 30%;
   }
@@ -201,7 +286,7 @@ header h1 {
   width: 25%;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #join-the-team {
     width: 60%;
     margin: 0 auto;
@@ -212,7 +297,7 @@ header h1 {
   color: #002240;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #join-the-team button {
     width: 40%;
   }
@@ -227,7 +312,7 @@ header h1 {
   padding: 1rem 0.5rem;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #timeline h2 {
     text-align: center;
   }
@@ -239,13 +324,13 @@ header h1 {
   background-image: -webkit-linear-gradient(80deg, #FFF5F5 80%, #FFF 20%);
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #offices h2 {
     text-align: center;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #offices {
     background-image: -webkit-linear-gradient(80deg, #FFF5F5 60%, #FFF 40%);
   }
@@ -255,7 +340,7 @@ header h1 {
   margin-bottom: 0px;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .flex-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -271,7 +356,7 @@ header h1 {
   padding: 2rem 1rem;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .cards {
     padding: 1.5rem 2.5rem;
     width: 40%;
@@ -295,7 +380,7 @@ header h1 {
   padding-top: 3rem;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #investors {
     background: url(../img/bg-investors.svg) no-repeat;
     background-size: 100%;
@@ -306,13 +391,13 @@ header h1 {
   text-align: left;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #investors h2 {
     text-align: center;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #investors #investors_list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -332,7 +417,7 @@ header h1 {
   background-color: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #investors #investors_list .cards {
     width: 40%;
     height: 230px;
@@ -356,7 +441,7 @@ header h1 {
   background-image: -webkit-linear-gradient(80deg, #0688FA 80%, #FFF 20%);
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #future {
     background-color: #0688FA;
     border-radius: 5px;
@@ -371,7 +456,7 @@ header h1 {
   font-size: 2em;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #future .flex-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -390,7 +475,7 @@ header h1 {
   margin: 1rem auto;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #future button {
     width: 40%;
   }
@@ -402,7 +487,7 @@ header h1 {
   margin: 2rem auto;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #footer_navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -414,7 +499,7 @@ header h1 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #footer_navigation h1 {
     -webkit-box-flex: 2;
         -ms-flex: 2;
@@ -422,7 +507,7 @@ header h1 {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #footer_navigation h1 img {
     width: 60%;
   }
@@ -443,7 +528,7 @@ header h1 {
       align-content: space-between;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #footer_navigation nav {
     -webkit-box-flex: 3;
         -ms-flex: 3;
@@ -473,7 +558,7 @@ footer {
   background-position-y: bottom;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   footer {
     background: #F4F4F4 url(../img/bg-footer.svg) no-repeat;
     background-size: contain;
@@ -500,7 +585,7 @@ footer #footer_bottom {
           justify-content: center;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   footer #footer_bottom {
     margin-bottom: 4rem;
     display: -webkit-box;
@@ -517,7 +602,7 @@ footer #footer_bottom p {
   margin: 3rem 0;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   footer #footer_bottom p {
     text-align: left;
     margin: 1rem 0;
@@ -551,7 +636,7 @@ footer #footer_bottom p {
   padding: 0;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   #terms_conditions_menu {
     width: 50%;
     display: -webkit-box;
@@ -567,15 +652,6 @@ footer #footer_bottom p {
   }
 }
 
-#terms_conditions_menu li {
-  list-style-type: none;
-  cursor: pointer;
-  font-weight: 800;
-  font-size: 1.2em;
-  text-align: center;
-  margin: 1rem 0;
-}
-
 /*--------Timeline Style-------- */
 /*-------TIMELINE---------*/
 .progress_timeline {
@@ -585,7 +661,7 @@ footer #footer_bottom p {
   position: relative;
 }
 
-@media (min-width: 768px) and (max-width: 1439px) {
+@media (min-width: 768px) {
   .progress_timeline {
     width: 75%;
     margin: 0px auto;
